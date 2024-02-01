@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import '../../ethers.dart';
+import 'ethers.dart';
 
 /// Dart Class for ERC20 Contract, A standard API for tokens within smart contracts.
 ///
@@ -88,9 +88,7 @@ class ContractERC20 {
 
   /// [Log] of `Approval` events.
   Future<List<Event>> approvalEvents(
-          [List<dynamic>? args, dynamic startBlock, dynamic endBlock]) =>
-      contract.queryFilter(
-          contract.getFilter('Approval', args ?? []), startBlock, endBlock);
+          [List<dynamic>? args, dynamic startBlock, dynamic endBlock]) => throw UnimplementedError();
 
   /// Sets [amount] as the allowance of [spender] over the caller's tokens.
   Future<TransactionResponse> approve(String spender, BigInt amount) =>
@@ -176,9 +174,7 @@ class ContractERC20 {
 
   /// [Log] of `Transfer` events.
   Future<List<Event>> transferEvents(
-          [List<dynamic>? args, dynamic startBlock, dynamic endBlock]) =>
-      contract.queryFilter(
-          contract.getFilter('Transfer', args ?? []), startBlock, endBlock);
+          [List<dynamic>? args, dynamic startBlock, dynamic endBlock]) => throw UnimplementedError();
 
   /// Transfer token from [sender] to [recipient] in [amount]. Emits `Transfer` events when called.
   Future<TransactionResponse> transferFrom(
