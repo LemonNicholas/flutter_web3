@@ -1,6 +1,22 @@
 library ethers;
 
-import '../../ethers.dart';
+import '../ethereum/ethereum.dart';
+import '../wallet_connect/wallet_connect.dart';
+
+part 'access_list.dart';
+part 'block.dart';
+part 'contract.dart';
+part 'event.dart';
+part 'fee_data.dart';
+part 'filter.dart';
+part 'interface.dart';
+part 'interop.dart';
+part 'log.dart';
+part 'network.dart';
+part 'provider.dart';
+part 'signer.dart';
+part 'transaction.dart';
+part 'wallet.dart';
 
 /// Get default [AbiCoder].
 AbiCoder get abiCoder => EthUtils.defaultAbiCoder;
