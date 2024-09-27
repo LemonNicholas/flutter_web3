@@ -68,7 +68,7 @@ class Transaction{
 
   @override
   String toString() =>
-      'Transaction: ${hash.substring(0, 10)} from ${from.substring(0, 10)} with value $value and data ${data.substring(0, 15)}...';
+      'Transaction: ${hash.substring(0, 10)} from ${from.substring(0, 10)} with value $value and data ${data}...';
 }
 
 class TransactionOverride {
