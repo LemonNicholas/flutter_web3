@@ -70,7 +70,7 @@ class Transaction<T extends _TransactionImpl> extends Interop<T> {
 
   @override
   String toString() =>
-      'Transaction: ${hash.substring(0, 10)} from ${from.substring(0, 10)} with value $value and data ${data.substring(0, 15)}...';
+      'Transaction: $hash from $from with value $value and data $data...';
 }
 
 class TransactionOverride extends Interop<_TransactionOverrideImpl> {
@@ -186,8 +186,8 @@ class TransactionReceipt extends Interop<_TransactionReceiptImpl> {
 
   @override
   String toString() => status
-      ? 'TransactionReceipt: ${transactionHash.substring(0, 10)} from ${from.substring(0, 10)} with $confirmations confirmations and ${logs.length} logs'
-      : 'TransactionReceipt: ${transactionHash.substring(0, 10)} reverted ';
+      ? 'TransactionReceipt: $transactionHash from $from with $confirmations confirmations and ${logs.length} logs'
+      : 'TransactionReceipt: $transactionHash reverted ';
 }
 
 /// A transaction request describes a transaction that is to be sent to the network or otherwise processed.
